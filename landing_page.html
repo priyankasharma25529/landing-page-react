@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="landing_page.css">
+    <link rel="stylesheet" type="text/css"
+     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="bootstrap.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="responsive.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- header -->
+   <section class="hero_section">
+        <nav class="navbar">
+            <h2>priyanka's burger <i class="fa-solid fa-burger fa-xl"></i></h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">wish list</a></li>
+            </ul>
+        </nav>
+        <div class="hero_text">
+            <h2>Best Burgers in the world</h2>
+            <p>Testiest burger you will ever taste</p>
+            <a href="#">order now</a>
+        </div>
+   </section>
+<!-- home section -->
+   <div id="home">
+   
+    <!-- cards -->
+     <!-- shop section -->
+     <section class="shop_section layout_padding">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>Burger's types</h2>
+          </div>
+          <div class="row" id="product-container">
+            <!-- Products will be dynamically added here -->
+          </div>
+          <div class="btn-box">
+            <a href="">View All Burgers</a>
+          </div>
+        </div>
+      </section>
+<script>
+    const products = [
+  { name: "Bacon-Burger", price: 200, imgSrc: "https://www.butter-n-thyme.com/wp-content/uploads/2023/04/Carls-Jr-Western-Bacon-Burger.jpg"},
+  { name: "Aussie Burger", price: 300, imgSrc: "https://www.butter-n-thyme.com/wp-content/uploads/2023/04/Aussie-Burger.jpg" },
+  { name: "Banh-Mi-Burger", price: 110, imgSrc: "https://www.butter-n-thyme.com/wp-content/uploads/2023/04/Banh-Mi-Burger.jpg" },
+  { name: "Beyond-Burger.jpg", price: 45, imgSrc: "https://www.butter-n-thyme.com/wp-content/uploads/2023/04/Beyond-Burger.jpg" },
+  { name: "Big-Mac-Burger", price: 95, imgSrc: "https://www.butter-n-thyme.com/wp-content/uploads/2023/04/Big-Mac-Burger.jpg" },
+  { name: "Breakfast-Burger", price: 70, imgSrc: "https://www.butter-n-thyme.com/wp-content/uploads/2023/04/Breakfast-Burger.jpg" },
+  { name: "Bratwurst-Burger", price: 400, imgSrc: "https://www.butter-n-thyme.com/wp-content/uploads/2023/04/Bratwurst-Burger.jpg" },
+  { name: "Burger-King-Whopper", price: 450, imgSrc: "https://www.butter-n-thyme.com/wp-content/uploads/2023/04/Burger-King-Whopper.jpg" },
+];
+
+const productContainer = document.getElementById("product-container");
+
+products.forEach((product) => {
+  const productHTML = `
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="box">
+        <a href="">
+          <div class="img-box">
+            <img src="${product.imgSrc}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>${product.name}</h6>
+            <h6>Price <span>$${product.price}</span></h6>
+          </div>
+          <div class="new">
+            <span>New</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  `;
+  productContainer.insertAdjacentHTML("beforeend", productHTML);
+});
+
+</script>      
+
+   <!-- ///////////footer  -->
+ <footer>
+    <div class="heading">
+        <h2>priyanka's burger<i class="fa-solid fa-burger fa-xl"></i></h2>
+        <div class="box">
+            <button id="btn1"><img src="india-flag-icon.png" alt="" style="height: 12px;width: 15px;">  INDIA</button>
+        <button id="btn2"><i class="fa-solid fa-globe fa-lg"></i> ENGLISH <i class="fa-solid fa-caret-down fa-lg"></i></button>
+        </div>
+    </div>
+    
+    
+   <div class="contain">
+    <div class="info">
+        <ul>
+         <li><h4>about Priyanka's burger<i class="fa-solid fa-burger fa-xl"></i></h4></li>
+             <li> <a href="">Who We Are</a></li>
+                <li><a href="">Blog</a></li>
+                    <li><a href="">Work With Us</a></li>
+                        <li> <a href="">Investor Relations</a></li>
+                            <li><a href="">Report Fraud</a></li>
+                                <li><a href="">Contact Us</a></li>
+             
+         
+        </ul>
+    </div>
+        <div class="info">
+            <ul>
+             <li><h4>about Priyanka's burger</h4></li>
+                 <li> <a href="">Who We Are</a></li>
+                    <li><a href="">Blog</a></li>
+                        <li><a href="">Work With Us</a></li>
+                            <li> <a href="">Investor Relations</a></li>
+                                <li><a href="">Report Fraud</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                 
+             
+            </ul>
+        </div>
+        <div class="info">
+            <ul>
+             <li><h4>about Priyanka's burger</h4></li>
+                 <li> <a href="">Who We Are</a></li>
+                    <li><a href="">Blog</a></li>
+                        <li><a href="">Work With Us</a></li>
+                            <li> <a href="">Investor Relations</a></li>
+                                <li><a href="">Report Fraud</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                 
+             
+            </ul>
+        </div>
+        
+   </div>
+</footer>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+</script>
+<script src="custom.js"></script>
+
+</body>
+</html> 
